@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'mystyles.css' %}">
+    <title>Portal Biblioteca</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/">PRINCIPAL</a> |
+        <a href="/livros">LIVROS</a> |
+        <a href="/tccs">TCCs</a> |
+        <a href="/dashboard">DASHBOARD</a> |
+        <a href="/auth/login">LOGIN</a> |
+        <a href="/auth/cadastro">CADASTRE-SE</a>
+    </div>
+    {% extends "base.html" %}
+
+    {% block titulo %}
+    Portal Biblioteca
+    {% endblock %}
+
+    {% block conteudo %}
+    <div class="main">
+        <h1>Portal Biblioteca</h1>
+        <img src="{% static 'logo-portal.png' %}" alt="logo-portal" width="400" height="300">
+    </div>
+    {% endblock %}
+</body>
+
+</html>
